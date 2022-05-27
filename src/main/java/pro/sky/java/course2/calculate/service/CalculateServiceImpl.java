@@ -24,6 +24,6 @@ public class CalculateServiceImpl implements CalculateService {
         if (num2 == 0)
             return "Ошибка! На ноль делить НЕЛЬЗЯ!";
         int result = num1 / num2;
-            return num1 + " / " + num2 + " = " + result;        }
+            return num1 + " / " + num2 + " = " + result;  }
     }
 
