@@ -21,28 +21,32 @@ public class CalculateController {
         return calculateService.hello();
     }
     @GetMapping(path = "/plus")
-    public String plus(@RequestParam (value = "num1", required = false) float num1,
-                       @RequestParam(value = "num2", required = false) float num2) {
-        return num1 + " + " + num2 + " = " + (num1 + num2);
-    }
+    public String plus(@RequestParam (value = "num1", required = false) Float num1,
+                       @RequestParam(value = "num2", required = false) Float num2) {
+        if (Objects.isNull(num1)||Objects.isNull(num2))
+            return "Внимание! Неправильно заполненное поле!";
+        return num1 +" + "+ num2 + " = " + (num1 + num2);   }
     @GetMapping(path = "/minus")
-    public String minus(@RequestParam (value = "num1", required = false) float num1,
-                        @RequestParam(value = "num2", required = false) float num2) {
-
-        return num1 + " - " + num2 + " = " + (num1 - num2);
-    }
+    public String minus(@RequestParam (value = "num1", required = false) Float num1,
+                        @RequestParam(value = "num2", required = false) Float num2) {
+        if (Objects.isNull(num1)||Objects.isNull(num2))
+            return "Внимание! Неправильное заполненно поле!";
+        return num1 +" - "+ num2 + " = " + (num1 - num2);    }
     @GetMapping(path = "/multiply")
-    public String multiply(@RequestParam (value = "num1", required = false) float num1,
-                           @RequestParam(value = "num2", required = false) float num2) {
-        return num1 + " * " + num2 + " = " + (num1 * num2);
-    }
+    public String multiply(@RequestParam (value = "num1",required = false) Float num1,
+                           @RequestParam(value = "num2", required = false) Float num2) {
+        if (Objects.isNull(num1)||Objects.isNull(num2))
+            return "Внимание! Неправильно заполненное поле!";
+        return num1 +" * "+ num2 + " = " + (num1 * num2);    }
     @GetMapping(path = "/divide")
-    public String divide(@RequestParam(value = "num1", required = false) float num1,
-                         @RequestParam(value = "num2", required = false) float num2) {
+    public String divide(@RequestParam(value = "num1", required = false) Float num1,
+                         @RequestParam(value = "num2", required = false) Float num2) {
+        if (Objects.isNull(num1)||Objects.isNull(num2))
+            return "Внимание! Неправильно заполненное поле!";
         if (num2 == 0) {
             return "На ноль делить НЕЛЬЗЯ!";
         }
-        return num1 + " / " + num2 + " = " + (num1 / num2);
+        return num1 +" / "+ num2 + " = " + (num1 / num2);
     }
     }
 

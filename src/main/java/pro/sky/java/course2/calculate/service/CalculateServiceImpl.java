@@ -11,7 +11,6 @@ public class CalculateServiceImpl implements CalculateService {
     public float plus(float num1, float num2) {
         float result = num1 + num2;
         return result;    }
-
     public float minus(float num1, float num2) {
         float result = num1 - num2;
         return result;    }
