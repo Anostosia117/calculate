@@ -8,22 +8,20 @@ public class CalculateServiceImpl implements CalculateService {
         return "Добро пожаловать в калькулятор";
     }
 
-    public String plus(int num1, int num2) {
-        int result = num1 + num2;
-        return num1 + " + " + num2 + " = " + result;    }
+    public float plus(float num1, float num2) {
+        float result = num1 + num2;
+        return result;    }
 
-    public String minus(int num1, int num2) {
-        int result = num1 - num2;
-        return num1 + " - " + num2 + " = " + result;    }
+    public float minus(float num1, float num2) {
+        float result = num1 - num2;
+        return result;    }
 
-    public String multiply(int num1, int num2) {
-        int result = num1 * num2;
-        return num1 + " * " + num2 + " = " + result;    }
+    public float multiply(float num1, float num2) {
+        float result = num1 * num2;
+        return result;    }
 
-    public String divide(int num1, int num2) {
-        if (num2 == 0)
-            return "Ошибка! На ноль делить НЕЛЬЗЯ!";
-        int result = num1 / num2;
-            return num1 + " / " + num2 + " = " + result;  }
+    public float divide(float num1, float num2) {
+        float result = num1 / num2;
+            return result;  }
     }
 
